@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';
+import { topologicalOrder, readySteps, dependenciesSatisfied, exampleFirewallPipelineSteps } from '@x12i/memorix-pipeline-orchestrator';
+const steps = structuredClone(exampleFirewallPipelineSteps);
+const ordered = topologicalOrder(steps);
+assert.equal(ordered.length, steps.length);
+const position = new Map(ordered.map((step, index) => [step.id, index]));
+for (const step of ordered) for (const dependency of step.dependsOn) assert(position.get(dependency) < position.get(step.id));
+const initial = readySteps(steps, []);
+assert(initial.length > 0);
+assert(initial.every(step => step.dependsOn.length === 0));
+const done = ordered.map(step => step.id);
+assert(dependenciesSatisfied(steps, ordered.at(-1).id, done));
+assert.deepEqual(readySteps(steps, done), []);
+console.log({ executionOrder: done, initiallyReady: initial.map(step => step.id) });

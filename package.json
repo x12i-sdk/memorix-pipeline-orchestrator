@@ -1,0 +1,22 @@
+{
+  "name": "memorix-pipeline-orchestrator-usage",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Usage example for @x12i/memorix-pipeline-orchestrator: order a pipeline and identify steps ready after each dependency.",
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "start": "node src/index.mjs",
+    "check": "node --check src/index.mjs"
+  },
+  "dependencies": {
+    "@x12i/memorix-pipeline-orchestrator": "1.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/x12i-sdk/memorix-pipeline-orchestrator.git"
+  },
+  "homepage": "https://www.npmjs.com/package/@x12i/memorix-pipeline-orchestrator"
+}

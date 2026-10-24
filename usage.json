@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "package": "@x12i/memorix-pipeline-orchestrator",
+  "packageVersion": "1.1.0",
+  "npmUrl": "https://www.npmjs.com/package/@x12i/memorix-pipeline-orchestrator",
+  "usageRepository": "https://github.com/x12i-sdk/memorix-pipeline-orchestrator",
+  "sourceRepository": null,
+  "sourceCommit": null,
+  "sourcePackageDirectory": null,
+  "example": {
+    "title": "Order a pipeline and identify steps ready after each dependency",
+    "entrypoint": "src/index.mjs",
+    "command": "npm start",
+    "requiresCredentials": false,
+    "validation": "passed",
+    "validatedAt": "2026-10-24T14:25:51.511234+00:00",
+    "isolatedInstallation": true,
+    "sourceSha256": "a5e9f94182a70c77330a75faf2a81700af2286df2750361c86b1b18cef1868db",
+    "manifestSha256": "5c7775f87fa3d9dc7692af0253deae75ad11fde37001cfdcb62f17dd9b437ac5"
+  },
+  "validationFiles": {
+    "src/index.mjs": "a5e9f94182a70c77330a75faf2a81700af2286df2750361c86b1b18cef1868db"
+  }
+}
